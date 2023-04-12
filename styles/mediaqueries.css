@@ -1,0 +1,42 @@
+/**** MEDIA-QUERIES ****/
+
+
+@media (max-width: 1300px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  #contact {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; */
+    /* min-height: 80vh;
+    background-color: var(--main-gray);
+    text-align: center; */
+    height: 100vh;
+  }
+
+  footer {
+    display: block;
+    text-align: center;
+    height: 100%;
+    padding: 5vw;
+  }
+  
+  footer p {
+    font-size: 1rem;
+  }
+  
+  footer a {
+    margin: 0 2%;
+  }
+}

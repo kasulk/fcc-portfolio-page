@@ -1,0 +1,114 @@
+.laptop {
+  /* Trick zum width & height fixed-dynamisch zu machen */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0; 
+  width: 100%;
+  height: 100%;
+}
+
+.laptop-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 100%;
+  background-color: var(--laptop-color);
+  box-shadow: 5px 0px 8px -4px var(--laptop-shadow-color);
+}
+
+.laptop-top,
+.laptop-screen,
+.laptop-screen img,
+.screen-effects {
+  border-radius: 2%;
+}
+
+.laptop-lock {
+  border: 1px outset var(--laptop-border-color1);
+  border-right: 1px outset var(--laptop-border-color2);
+  border-bottom: 1px outset var(--laptop-border-color2);
+}
+
+.laptop-top,
+.laptop-bottom-left,
+.laptop-bottom-middle,
+.laptop-bottom-right {
+  border: 1px outset var(--laptop-border-color1);
+  border-right: 1px outset var(--laptop-border-color2);
+  border-bottom: 1px outset var(--laptop-border-color2);
+}
+
+.laptop-cam {
+  position: absolute;
+  top: 1.7%;
+  width: 0.9%;
+  height: 1.6%;
+  background-color: var(--laptop-color2);
+  border-radius: 50%;
+}
+
+.laptop-screen {
+  position: relative;
+  width: 93%;
+  height: 90%;
+}
+
+.laptop-screen img {
+  width: 100%;
+  height: 100%;
+}
+
+.screen-effects {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(33deg, transparent 60%, var(--main-white) 40%);
+  opacity: 0.02;
+}
+
+.laptop-bottom {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 8%;
+  box-shadow: 0 5px 5px -5px var(--laptop-shadow-color);
+}
+
+.laptop-bottom * {
+  background-color: var(--laptop-color);
+}
+
+.laptop-bottom-left {
+  width: 10%;
+  height: 100%;
+  border-radius: 20% 0 0 50%;
+  border-right: 0;
+}
+
+.laptop-bottom-middle {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  height: 100%;
+  border-left: 0;
+  border-right: 0;
+}
+
+.laptop-lock {
+  width: 20%;
+  height: 40%;
+  background-color: var(--laptop-color2);
+}
+
+.laptop-bottom-right {
+  width: 10%;
+  height: 100%;
+  border-radius: 0 20% 50% 0;
+  border-left: 0;
+}

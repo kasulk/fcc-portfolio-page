@@ -1,0 +1,32 @@
+:root {
+  --main-white: #f0f0f0;
+  --main-red: #be3144;
+  --main-blue: #45567d;
+  --main-gray: #3a3d40;
+  --main-gray-dark: #181719;
+
+  --laptop-color: var(--main-gray);
+  --laptop-color2: #18171966;
+
+  --laptop-shadow-color: var(--laptop-color2);
+  --laptop-border-color1: #18171999;
+  --laptop-border-color2: #3a3d4011;
+}
+
+@font-face {
+  font-family: Poppins;
+  font-weight: 200;
+  src: url("fonts/Poppins/Poppins-Light.ttf");
+}
+@font-face {
+  font-family: Poppins;
+  font-weight: 300;
+  font-style: normal;
+  src: url("fonts/Poppins/Poppins-Light.ttf");
+}
+@font-face {
+  font-family: Poppins;
+  font-weight: 400;
+  font-style: normal;
+  src: url("fonts/Poppins/Poppins-Regular.ttf");
+}

@@ -1,0 +1,49 @@
+/**** MEDIA-QUERIES ****/
+
+
+@media (max-width: 1300px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 5%;
+    
+    /* padding: 10% 10% 0%; */
+    /* padding: 10% 10% 30%; */
+    /* margin-bottom: 14rem; */
+  }
+
+  #show-all-button {
+    margin-top: 16rem;
+
+  }
+  
+  footer {
+    display: block;
+    text-align: center;
+    height: 100%;
+    padding: 5vw;
+  }
+  
+  footer p {
+    font-size: 1rem;
+  }
+  
+  footer a {
+    margin: 0 2%;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    /* grid-template-columns: 1fr; */
+    /* padding: 10% 0 0%; */
+
+    /* padding: 10% 0 30%; */
+  }
+}
