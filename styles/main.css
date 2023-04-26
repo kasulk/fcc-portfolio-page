@@ -25,6 +25,10 @@ h1 {
   margin-bottom: 0;
 }
 
+h1:hover {
+  animation: var(--move-up-down);
+}
+
 h2 {
   font-size: 3rem;
   margin-top: 1.8rem;
@@ -121,6 +125,7 @@ section {
   background-image: none;
   background-color: var(--main-red);
   transition: 0.4s ease-out;
+  /* animation: MoveUpDown 2s linear infinite; */
 }
 
 #socials {
@@ -136,9 +141,14 @@ section {
   align-items: center;
   margin: 1rem;
   text-shadow: 2px 2px 1px var(--main-gray-dark);
-  transition: transform 0.3s ease-out;
+  /* transition: transform 0.3s ease-out; */
 }
 
+
+/**** ANIMATIONS ****/
+h1:hover,
+.project-tile:hover,
+#show-all-button:hover,
 #socials a:hover {
-  transform: translateY(-8px);
+  animation: var(--move-up-down);
 }
