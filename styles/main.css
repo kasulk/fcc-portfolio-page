@@ -106,6 +106,7 @@ section {
   /* Trick zum width & height verhältnis fixed, aber gemeinsam dynamisch zu machen */
   position: relative;
   padding-top: 60%;
+  /* padding-top: 30%; */
   height: 100%;
   width: 100%;
 }
