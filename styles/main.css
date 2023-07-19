@@ -8,7 +8,6 @@ html {
   font-size: 16px;
   scroll-padding-top: 4rem; /* fixes: Fixed page header overlaps in-page anchors */
   scroll-behavior: smooth;
-  
 }
 
 body {
@@ -69,7 +68,11 @@ section {
 
 #welcome {
   height: 100vh;
-  background-image: linear-gradient(62deg, var(--main-gray) 0%, var(--main-gray-dark) 100%);
+  background-image: linear-gradient(
+    62deg,
+    var(--main-gray) 0%,
+    var(--main-gray-dark) 100%
+  );
   padding-top: 25vh;
 }
 
@@ -119,12 +122,15 @@ section {
   padding: 1rem 0;
   color: var(--main-white);
   font-weight: bold;
+  transition: 0.4s ease-out;
+
+  display: none;
 }
 
 #show-all-button:hover {
   background-image: none;
   background-color: var(--main-red);
-  transition: 0.4s ease-out;
+  /* transition: 0.4s ease-out; */
   /* animation: MoveUpDown 2s linear infinite; */
 }
 
@@ -143,7 +149,6 @@ section {
   text-shadow: 2px 2px 1px var(--main-gray-dark);
   /* transition: transform 0.3s ease-out; */
 }
-
 
 /**** ANIMATIONS ****/
 h1:hover,
