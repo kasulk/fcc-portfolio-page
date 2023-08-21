@@ -142,11 +142,12 @@ section:nth-of-type(even) {
 .fa-css3-alt > .icon-bg {
   top: 10%;
   right: 15%;
-  background-color: var(--primary-accent-color);
+  background-color: var(--main-white);
 }
 
 .fa-square-js > .icon-bg {
-  background-color: #111;
+  /* background-color: #111; */
+  background-color: var(--main-gray-dark);
   bottom: 10%;
   right: 5%;
 }
