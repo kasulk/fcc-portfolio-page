@@ -94,7 +94,7 @@ section:nth-of-type(even) {
   /* position: relative; */
 }
 
-.fa-brands {
+#skills .fa-brands {
   position: relative;
   z-index: 1;
   /* font-size: 1000%; */
