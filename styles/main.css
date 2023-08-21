@@ -83,6 +83,14 @@ section:nth-of-type(even) {
   padding-top: 25vh;
 }
 
+#skills,
+#motto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
 #skills-container {
   /* display: flex;
   justify-content: space-evenly;
@@ -152,17 +160,14 @@ section:nth-of-type(even) {
   right: 5%;
 }
 
-#motto blockquote {
-  /* display: flex; */
-  /* flex-direction: column; */
-}
-
 #motto q {
   /* display: block; */
   /* font-size: 3rem; */
   /* font-weight: bold; */
-  font-weight: normal;
+  /* font-weight: normal; */
   font-style: italic;
+  text-shadow: 2px 2px 1px var(--main-gray-dark);
+  /* letter-spacing: 0.15rem; */
   /* margin-bottom: 2rem; */
 }
 
