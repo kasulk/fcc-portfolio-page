@@ -343,14 +343,14 @@
           >Privacy</a
         >
       </p>
-      <p>Made with 🍕 in Neukölln.</p>
+      <p>Made with<span title="Doener Kebap">🥙</span>in Neukölln.</p>
       <p id="copyright">Daniel Kaser</p>
     </footer>
 
     <script>
       const thisYear = new Date().getFullYear();
       const element = (document.createElement("span").innerHTML =
-        "© " + thisYear);
+        "© " + thisYear + " ");
 
       document.querySelector("#copyright").prepend(element);
     </script>
