@@ -64,6 +64,13 @@ section {
   padding: 3rem;
   margin: 0;
   text-align: center;
+
+  background-color: var(--main-gray);
+}
+
+section:nth-of-type(even) {
+  background-color: var(--main-blue);
+  color: var(--main-white);
 }
 
 #welcome {
@@ -76,11 +83,79 @@ section {
   padding-top: 25vh;
 }
 
+#skills-container {
+  /* display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap; */
+  text-align: center;
+}
+
+.skill-box {
+  /* position: relative; */
+}
+
+.fa-brands {
+  position: relative;
+  z-index: 1;
+  /* font-size: 1000%; */
+  font-size: 10rem;
+  margin: 1rem 3rem;
+}
+
+.fa-html5 {
+  color: #e34c26;
+  -webkit-animation: fa-beat 2s infinite linear;
+  animation: fa-beat 2s infinite linear;
+}
+
+.fa-css3-alt {
+  color: #1a73b9;
+  -webkit-animation: fa-flip 7s infinite linear;
+  animation: fa-flip 7s infinite linear;
+}
+
+.fa-square-js {
+  color: #f7e018;
+  -webkit-animation: fa-bounce 1.3s infinite linear;
+  animation: fa-bounce 1.3s infinite linear;
+}
+
+.fa-react {
+  color: #0074a6;
+  -webkit-animation: fa-spin 20s infinite linear;
+  animation: fa-spin 20s infinite linear;
+}
+
+.fa-node-js {
+  color: #5fa04e;
+}
+
+/* put boxes in the bg of the icons to give them a colored bg */
+.icon-bg {
+  position: absolute;
+  z-index: -1;
+  height: 70%;
+  width: 70%;
+}
+
+.fa-html5 > .icon-bg,
+.fa-css3-alt > .icon-bg {
+  top: 10%;
+  right: 15%;
+  background-color: var(--primary-accent-color);
+}
+
+.fa-square-js > .icon-bg {
+  background-color: #111;
+  bottom: 10%;
+  right: 5%;
+}
+
 #projects {
   display: flex;
   flex-direction: column;
   height: 100%;
-  background-color: var(--main-blue);
+  /* background-color: var(--main-blue); */
   padding-bottom: 5rem;
 }
 
@@ -91,7 +166,7 @@ section {
   align-items: center;
   width: 100%;
   min-height: 80vh;
-  background-color: var(--main-gray);
+  /* background-color: var(--main-gray); */
   text-align: center;
 }
 
