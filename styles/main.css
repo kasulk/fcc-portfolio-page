@@ -153,16 +153,17 @@ section:nth-of-type(even) {
 }
 
 #motto blockquote {
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
 }
 
 #motto q {
   /* display: block; */
-  font-size: 3rem;
+  /* font-size: 3rem; */
   /* font-weight: bold; */
+  font-weight: normal;
   font-style: italic;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
 }
 
 #motto cite {
