@@ -15,7 +15,7 @@
 
 const url = "https://api.chucknorris.io/jokes/random";
 // const quoteElement = document.querySelector("#quotes q");
-const quoteElement = document.querySelector("#motto q");
+const quoteElement = document.querySelector("#quote q");
 
 setInterval(() => {
   fetch(url)

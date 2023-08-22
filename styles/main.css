@@ -84,7 +84,8 @@ section:nth-of-type(even) {
 }
 
 #skills,
-#motto {
+/* #motto { */
+#quote {
   display: flex;
   flex-direction: column;
   justify-content: center;
