@@ -23,10 +23,7 @@ function fetchAndRender() {
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        quoteElement.innerHTML = `${
-          //   processFetchedData(data)
-          data.value[0].toUpperCase() + data.value.substring(1)
-        }`;
+        quoteElement.innerHTML = `${processFetchedData(data)}`;
         // go back to previously saved scroll position
         window.scrollTo(0, savedScrollPosition);
         quoteElement.classList.remove("fade");
@@ -38,7 +35,20 @@ function fetchAndRender() {
 }
 
 function processFetchedData(data) {
-  data.value[0].toUpperCase() + data.value.substring(1);
+  //   data.value = "test...";
+
+  // add a dot to the end if its missing
+  if (data.value[data.value.length - 1] !== ".") data.value = data.value + ".";
+
+  // make sure the first letter of the quote is always upper case
+  data.value = data.value[0].toUpperCase() + data.value.substring(1);
+
+  // replace double quotes with single quotes
+  data.value = data.value.replace(/"/g, "'");
+
+  //   console.log("data processed:", data);
+  return data.value;
 }
 
 setInterval(fetchAndRender, 1000 * 10);
+// setInterval(fetchAndRender, 1000 * 4);
