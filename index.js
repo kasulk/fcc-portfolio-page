@@ -1,17 +1,11 @@
-// const demo = {
-//   categories: [],
-//   created_at: "2020-01-05 13:42:24.142371",
-//   icon_url: "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
-//   id: "Wv3UecrjSliPlLacFER2MA",
-//   updated_at: "2020-01-05 13:42:24.142371",
-//   url: "https://api.chucknorris.io/jokes/Wv3UecrjSliPlLacFER2MA",
-//   value:
-//     "Chuck Norris can climb Mount Everest with his eyes closed and his arms tied behind his back. He does that every morning to worm-up.",
-// };
-
-const url = "https://api.chucknorris.io/jokes/random";
+// const url = "https://api.chucknorris.io/jokes/random";
+const url = "https://api.chucknorris.io/jokes/random?category=";
+let category = getNextRandomCategory();
 const quoteElement = document.querySelector("#quote q");
 let savedScrollPosition = 0;
+
+// setInterval(fetchAndRender, 1000 * 10);
+setInterval(fetchAndRender, 1000 * 4);
 
 function fetchAndRender() {
   quoteElement.classList.add("fade");
@@ -20,13 +14,15 @@ function fetchAndRender() {
   setTimeout(() => {
     savedScrollPosition = window.scrollY;
 
-    fetch(url)
+    fetch(url + category)
       .then((response) => response.json())
       .then((data) => {
         quoteElement.innerHTML = `${processFetchedData(data)}`;
         // go back to previously saved scroll position
         window.scrollTo(0, savedScrollPosition);
         quoteElement.classList.remove("fade");
+        category = getNextRandomCategory();
+        console.log(category);
       })
       .catch((error) => {
         console.error("Error fetching the data:", error);
@@ -53,5 +49,38 @@ function processFetchedData(data) {
   return data.value;
 }
 
-setInterval(fetchAndRender, 1000 * 10);
-// setInterval(fetchAndRender, 1000 * 4);
+function getNextRandomCategory() {
+  const categories = [
+    "animal",
+    "career",
+    "celebrity",
+    "dev",
+    //   "explicit",
+    "fashion",
+    "food",
+    "history",
+    "money",
+    "movie",
+    "music",
+    "political",
+    "religion",
+    "science",
+    "sport",
+    "travel",
+  ];
+
+  const randomIndex = Math.floor(Math.random() * categories.length);
+
+  return categories[randomIndex];
+}
+
+// const demoResponse = {
+//   categories: [],
+//   created_at: "2020-01-05 13:42:24.142371",
+//   icon_url: "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
+//   id: "Wv3UecrjSliPlLacFER2MA",
+//   updated_at: "2020-01-05 13:42:24.142371",
+//   url: "https://api.chucknorris.io/jokes/Wv3UecrjSliPlLacFER2MA",
+//   value:
+//     "Chuck Norris can climb Mount Everest with his eyes closed and his arms tied behind his back. He does that every morning to worm-up.",
+// };
