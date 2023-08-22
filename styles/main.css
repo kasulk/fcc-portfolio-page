@@ -34,12 +34,17 @@ h2 {
   margin-bottom: 3rem;
 }
 
-h3 {
+h3,
+h4 {
   /* font-family: Poppins, sans-serif; */
   font-style: italic;
   font-weight: 200;
   font-size: 2rem;
   color: var(--main-red);
+}
+
+h4 {
+  color: var(--main-white);
 }
 
 p {
