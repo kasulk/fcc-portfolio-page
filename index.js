@@ -35,10 +35,13 @@ function fetchAndRender() {
 }
 
 function processFetchedData(data) {
-  //   data.value = "test...";
+  //   data.value = "test";
 
+  const lastChar = data.value[data.value.length - 1];
+  // remove ',' from ending
+  if (/,/.test(lastChar)) data.value = data.value.slice(0, -1);
   // add a dot to the end if its missing
-  if (data.value[data.value.length - 1] !== ".") data.value = data.value + ".";
+  if (/[^.!?;]/.test(lastChar)) data.value = data.value + ".";
 
   // make sure the first letter of the quote is always upper case
   data.value = data.value[0].toUpperCase() + data.value.substring(1);
