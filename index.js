@@ -14,12 +14,12 @@ const quoteElement = document.querySelector("#quote q");
 let savedScrollPosition = 0;
 
 function fetchAndRender() {
-  savedScrollPosition = window.scrollY;
-
   quoteElement.classList.add("fade");
 
   // give the fade a second (and a half) to do its magic
   setTimeout(() => {
+    savedScrollPosition = window.scrollY;
+
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
