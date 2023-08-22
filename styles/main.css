@@ -45,6 +45,7 @@ h4 {
 
 h4 {
   color: var(--main-white);
+  text-shadow: 2px 2px 1px var(--main-gray-dark);
 }
 
 p {
@@ -95,6 +96,15 @@ section:nth-of-type(even) {
   flex-direction: column;
   justify-content: center;
   height: 100vh;
+}
+
+#quote h4 {
+  /* opacity: 1; */
+  /* transition: opacity 0.5s; */
+}
+.fade {
+  opacity: 0;
+  transition: opacity 1000ms;
 }
 
 #skills-container {
