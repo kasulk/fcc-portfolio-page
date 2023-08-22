@@ -1,6 +1,7 @@
 // const url = "https://api.chucknorris.io/jokes/random";
 const url = "https://api.chucknorris.io/jokes/random?category=";
 let category = getNextRandomCategory();
+
 const quoteElement = document.querySelector("#quote q");
 let savedScrollPosition = 0;
 
@@ -17,7 +18,7 @@ function fetchAndRender() {
     fetch(url + category)
       .then((response) => response.json())
       .then((data) => {
-        quoteElement.innerHTML = `${processFetchedData(data)}`;
+        quoteElement.innerHTML = fixFetchedData(data);
         // go back to previously saved scroll position
         window.scrollTo(0, savedScrollPosition);
         quoteElement.classList.remove("fade");
@@ -30,7 +31,7 @@ function fetchAndRender() {
   }, 1500);
 }
 
-function processFetchedData(data) {
+function fixFetchedData(data) {
   //   data.value = "test";
 
   const lastChar = data.value[data.value.length - 1];
@@ -62,8 +63,8 @@ function getNextRandomCategory() {
     "money",
     "movie",
     "music",
-    "political",
-    "religion",
+    // "political",
+    // "religion",
     "science",
     "sport",
     "travel",
