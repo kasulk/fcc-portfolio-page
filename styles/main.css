@@ -162,12 +162,7 @@ section:nth-of-type(even) {
   right: 5%;
 }
 
-#motto q {
-  font-style: italic;
-  text-shadow: 2px 2px 1px var(--main-gray-dark);
-}
-
-#motto cite {
+#quote cite {
   font-size: 1.5rem;
 }
 

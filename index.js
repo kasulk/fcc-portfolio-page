@@ -3,6 +3,7 @@ const url = "https://api.chucknorris.io/jokes/random?category=";
 let category = getNextRandomCategory();
 
 const quoteElement = document.querySelector("#quote q");
+const citeElement = document.querySelector("#quote cite");
 let savedScrollPosition = 0;
 
 setInterval(fetchAndRender, 1000 * 10);
@@ -10,6 +11,7 @@ setInterval(fetchAndRender, 1000 * 10);
 
 function fetchAndRender() {
   quoteElement.classList.add("fade");
+  citeElement.classList.add("fade");
 
   // give the fade a second (and a half) to do its magic
   setTimeout(() => {
@@ -32,13 +34,13 @@ function fetchAndRender() {
 }
 
 function fixFetchedData(data) {
-  //   data.value = "test";
+  // data.value = "test'";
 
   const lastChar = data.value[data.value.length - 1];
   // remove ',' from ending
   if (/,/.test(lastChar)) data.value = data.value.slice(0, -1);
   // add a dot to the end if its missing
-  if (/[^.!?;]/.test(lastChar)) data.value = data.value + ".";
+  if (/[^.!?;']/.test(lastChar)) data.value = data.value + ".";
 
   // make sure the first letter of the quote is always upper case
   data.value = data.value[0].toUpperCase() + data.value.substring(1);
