@@ -15,10 +15,6 @@
     <link rel="stylesheet" href="styles/laptop.css" />
     <link rel="stylesheet" href="styles/footer.css" />
     <link rel="stylesheet" href="styles/mediaqueries.css" />
-    <link
-      rel="stylesheet"
-      href="fonts/Poppins/family=Poppins:ital,wght@0,300;0,400;1,200&display=swap"
-    />
   </head>
 
   <body>
@@ -55,11 +51,11 @@
           <!-- <i class="fa-brands fa-square-github"></i> -->
         </div>
       </section>
-      <section id="motto">
+      <section id="quote">
         <blockquote>
-          <h2>
+          <h4>
             <q>Be so good they can't ignore you.</q>
-          </h2>
+          </h4>
           <cite>&mdash; Steve Martin</cite>
         </blockquote>
       </section>
@@ -342,12 +338,6 @@
       <p id="copyright">Daniel Kaser</p>
     </footer>
 
-    <script>
-      const thisYear = new Date().getFullYear();
-      const element = (document.createElement("span").innerHTML =
-        "© " + thisYear + " ");
-
-      document.querySelector("#copyright").prepend(element);
-    </script>
+    <script type="module" src="index.js"></script>
   </body>
 </html>

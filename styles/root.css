@@ -16,30 +16,29 @@
 }
 
 @font-face {
-  font-family: Poppins;
+  font-family: "Poppins";
   font-weight: 200;
-  src: url("fonts/Poppins/Poppins-Light.ttf");
+  src: url("../fonts/Poppins/Poppins-Light.ttf");
 }
 @font-face {
-  font-family: Poppins;
+  font-family: "Poppins";
   font-weight: 300;
   font-style: normal;
-  src: url("fonts/Poppins/Poppins-Light.ttf");
+  src: url("../fonts/Poppins/Poppins-Light.ttf");
 }
 @font-face {
-  font-family: Poppins;
+  font-family: "Poppins";
   font-weight: 400;
   font-style: normal;
-  src: url("fonts/Poppins/Poppins-Regular.ttf");
+  src: url("../fonts/Poppins/Poppins-Regular.ttf");
 }
 
-
 @keyframes MoveUpDown {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
     transform: translateY(-0.25rem);
   }
-  
 }

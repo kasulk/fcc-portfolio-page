@@ -34,16 +34,22 @@ h2 {
   margin-bottom: 3rem;
 }
 
-h3 {
-  /* font-family: Poppins, sans-serif; */
+h3,
+h4 {
+  font-family: "Poppins", sans-serif;
   font-style: italic;
   font-weight: 200;
   font-size: 2rem;
   color: var(--main-red);
 }
 
+h4 {
+  color: var(--main-white);
+  text-shadow: 2px 2px 1px var(--main-gray-dark);
+}
+
 p {
-  /* font-family: Poppins, sans-serif; */
+  font-family: "Poppins", sans-serif;
   font-style: italic;
   font-weight: 200;
   font-size: 1.1rem;
@@ -84,11 +90,16 @@ section:nth-of-type(even) {
 }
 
 #skills,
-#motto {
+#quote {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100vh;
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity 1000ms;
 }
 
 #skills-container {
@@ -151,12 +162,7 @@ section:nth-of-type(even) {
   right: 5%;
 }
 
-#motto q {
-  font-style: italic;
-  text-shadow: 2px 2px 1px var(--main-gray-dark);
-}
-
-#motto cite {
+#quote cite {
   font-size: 1.5rem;
 }
 
