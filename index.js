@@ -5,8 +5,8 @@ let category = getNextRandomCategory();
 const quoteElement = document.querySelector("#quote q");
 let savedScrollPosition = 0;
 
-// setInterval(fetchAndRender, 1000 * 10);
-setInterval(fetchAndRender, 1000 * 4);
+setInterval(fetchAndRender, 1000 * 10);
+// setInterval(fetchAndRender, 1000 * 4);
 
 function fetchAndRender() {
   quoteElement.classList.add("fade");
