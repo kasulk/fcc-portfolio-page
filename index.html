@@ -338,13 +338,6 @@
       <p id="copyright">Daniel Kaser</p>
     </footer>
 
-    <script>
-      const thisYear = new Date().getFullYear();
-      const element = (document.createElement("span").innerHTML =
-        "© " + thisYear + " ");
-
-      document.querySelector("#copyright").prepend(element);
-    </script>
-    <script src="index.js"></script>
+    <script type="module" src="index.js"></script>
   </body>
 </html>
