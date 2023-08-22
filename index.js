@@ -23,7 +23,7 @@ function fetchAndRender() {
         window.scrollTo(0, savedScrollPosition);
         quoteElement.classList.remove("fade");
         category = getNextRandomCategory();
-        console.log(category);
+        // console.log("next category:", category);
       })
       .catch((error) => {
         console.error("Error fetching the data:", error);
