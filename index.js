@@ -13,21 +13,27 @@
 //     "Chuck Norris can climb Mount Everest with his eyes closed and his arms tied behind his back. He does that every morning to worm-up.",
 // };
 
-const url = "https://api.chucknorris.io/jokes/random";
-// const quoteElement = document.querySelector("#quotes q");
+// const url = "https://api.chucknorris.io/jokes/random";
 const quoteElement = document.querySelector("#quote q");
+let savedScrollPosition = 0;
 
-setInterval(() => {
-  fetch(url)
+function fetchAndRender() {
+  //   const savedScrollPosition = quoteElement.scrollTop;
+  savedScrollPosition = window.scrollY;
+
+  fetch("https://api.chucknorris.io/jokes/random")
     .then((response) => response.json())
     .then((data) => {
       console.log(data.value);
-      quoteElement.innerHTML = `${data.value}`;
+      quoteElement.innerHTML = `${data.value[0].toUpperCase()}${data.value.substring(
+        1
+      )}`;
+      window.scrollTo(0, savedScrollPosition);
+      //   quoteElement.scrollTop = savedScrollPosition;
     })
     .catch((error) => {
-      console.error("Fehler beim Abrufen der Daten:", error);
-      // quoteElement.innerHTML = "Fehler beim Abrufen der Daten.";
+      console.error("Error fetching the data:", error);
     });
+}
 
-  //   console.log("quoteElement:", quoteElement);
-}, 3000);
+setInterval(fetchAndRender, 5000);
