@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  outline: 1px dashed crimson;
+  /*   ^^^ for production only ^^^   */
 }
 
 html {
@@ -187,6 +189,7 @@ section:nth-of-type(even) {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 3rem;
+  row-gap: 5rem;
   padding: 0;
 }
 
