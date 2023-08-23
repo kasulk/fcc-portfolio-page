@@ -120,4 +120,34 @@
   /* top: 50%; */
   left: 50%; /* center horizontally */
   transform: translateX(-50%); /* center horizontally */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.laptop-description p {
+  margin: 0;
+}
+
+.laptop-description h4 {
+  margin: 0;
+}
+
+.laptop-description ul {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.laptop-description ul li {
+}
+
+.laptop-description ul > li:not(:first-child) {
+  /* .laptop-description ul > li:not(:first-child)::after { */
+  /* content: " • "; */
+  /* content: "•"; */
+  /* margin-right: 1rem; */
+  list-style: unset;
+  margin-left: 1.6rem;
 }

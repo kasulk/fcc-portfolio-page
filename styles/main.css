@@ -189,7 +189,7 @@ section:nth-of-type(even) {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 3rem;
-  row-gap: 5rem;
+  row-gap: 7rem;
   padding: 0;
 }
 
