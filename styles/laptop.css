@@ -127,11 +127,12 @@
 }
 
 .laptop-description p {
-  margin: 0;
+  margin: 1rem 0;
 }
 
 .laptop-description h4 {
   margin: 0;
+  text-decoration: underline;
 }
 
 .laptop-description ul {
@@ -139,16 +140,22 @@
   padding: 0;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  font-size: small;
 }
 
 .laptop-description ul li {
+  white-space: nowrap;
 }
 
 .laptop-description ul > li:not(:first-child) {
-  /* .laptop-description ul > li:not(:first-child)::after { */
-  /* content: " • "; */
-  /* content: "•"; */
-  /* margin-right: 1rem; */
-  list-style: unset;
-  margin-left: 1.6rem;
+  /* list-style: unset; */
+  /* margin-left: 1.6rem; */
+}
+
+.laptop-description ul > li:not(:last-child)::after {
+  content: "\2022";
+  font-size: 0.6rem;
+  vertical-align: middle;
+  padding: 0.35rem;
 }
