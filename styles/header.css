@@ -36,7 +36,7 @@ header li {
 
 header li:hover {
   background-color: var(--main-blue);
-  height: 4.1rem;
+  height: 4.3rem;
 }
 header a {
   height: 100%;
