@@ -189,8 +189,11 @@ section:nth-of-type(even) {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 3rem;
-  row-gap: 10rem;
+  row-gap: 12rem;
+  /* row-gap: 25%; */
   padding: 0;
+  margin-bottom: 6rem;
+  /* margin-bottom: 35%; */
 }
 
 .project-tile {

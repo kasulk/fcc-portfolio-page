@@ -114,10 +114,8 @@
 }
 
 .laptop-description {
-  background-color: darkcyan;
   position: absolute;
   width: 100%;
-  /* top: 50%; */
   left: 50%; /* center horizontally */
   transform: translateX(-50%); /* center horizontally */
 
@@ -134,6 +132,7 @@
   font-size: 1.4rem;
   margin: 0.5rem 0 0 0;
   text-decoration: underline;
+  text-transform: uppercase;
 }
 
 .laptop-description ul {
@@ -142,16 +141,11 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  font-size: small;
+  font-size: 0.8rem;
 }
 
 .laptop-description ul li {
   white-space: nowrap;
-}
-
-.laptop-description ul > li:not(:first-child) {
-  /* list-style: unset; */
-  /* margin-left: 1.6rem; */
 }
 
 .laptop-description ul > li:not(:last-child)::after {

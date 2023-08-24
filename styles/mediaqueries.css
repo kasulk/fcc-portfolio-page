@@ -1,27 +1,27 @@
 /**** MEDIA-QUERIES ****/
 
-
-@media (max-width: 1300px) {
+@media (max-width: 1280px) {
   .grid-container {
     grid-template-columns: 1fr 1fr;
+    row-gap: 10rem;
   }
 }
 
+@media (max-width: 1024px) {
+  html {
+    font-size: 12px;
+  }
+}
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
   .grid-container {
     grid-template-columns: 1fr;
   }
 
   #contact {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%; */
-    /* min-height: 80vh;
-    background-color: var(--main-gray);
-    text-align: center; */
     height: 100vh;
   }
 
@@ -31,12 +31,22 @@
     height: 100%;
     padding: 5vw;
   }
-  
+
   footer p {
     font-size: 1rem;
   }
-  
+
   footer a {
     margin: 0 2%;
+  }
+
+  @media (max-width: 640px) {
+    html {
+      font-size: 10px;
+    }
+
+    .grid-container {
+      row-gap: 12rem;
+    }
   }
 }
