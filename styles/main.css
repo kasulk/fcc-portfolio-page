@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  outline: 1px dashed crimson;
+  /* outline: 1px dashed crimson; */
   /*   ^^^ for production only ^^^   */
 }
 

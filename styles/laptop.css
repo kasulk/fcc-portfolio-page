@@ -146,6 +146,7 @@
 
 .laptop-description ul li {
   white-space: nowrap;
+  margin-bottom: 0.25rem;
 }
 
 .laptop-description ul > li:not(:last-child)::after {

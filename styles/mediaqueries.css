@@ -3,7 +3,7 @@
 @media (max-width: 1280px) {
   .grid-container {
     grid-template-columns: 1fr 1fr;
-    row-gap: 10rem;
+    row-gap: 11rem;
   }
 }
 
