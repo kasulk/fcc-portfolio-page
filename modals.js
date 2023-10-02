@@ -1,13 +1,11 @@
-const imprintLink = document.querySelector("#legal span:first-child");
-const modal = document.getElementById("modal-imprint");
-const close = document.getElementById("close");
+const imprintButton = document.querySelector("#legal button:first-child");
+const imprintModal = document.getElementById("modal-imprint");
+const imprintClose = document.getElementById("close");
 
-imprintLink.addEventListener("click", () => {
-  console.log("clicked");
-  modal.style.display = "block";
-  console.log("modal", modal);
+imprintButton.addEventListener("click", () => {
+  imprintModal.style.display = "block";
 });
 
-close.addEventListener("click", () => {
-  modal.style.display = "none";
+imprintClose.addEventListener("click", () => {
+  imprintModal.style.display = "none";
 });
