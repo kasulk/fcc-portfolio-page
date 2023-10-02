@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/laptop.css" />
     <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/modals.css" />
     <link rel="stylesheet" href="styles/mediaqueries.css" />
   </head>
 
@@ -544,15 +545,27 @@
     </main>
     <footer>
       <p id="legal">
-        <a href="https://www.danielkaser.de/comedy/impressum/">Imprint</a>
-        <a href="https://www.danielkaser.de/comedy/datenschutzerklaerung/"
-          >Privacy</a
-        >
+        <button>Imprint</button>
+        <button>Privacy</button>
       </p>
       <p>Made with<span title="Doener Kebap">🍕</span>in Neukölln.</p>
       <p id="copyright">Daniel Kaser</p>
     </footer>
 
+    <div id="modal-imprint" class="modal">
+      <div class="modal-content">
+        <span class="close" id="close">&times;</span>
+        <iframe id="popupContent" src="imprint.html"></iframe>
+      </div>
+    </div>
+    <div id="modal-privacy" class="modal">
+      <div class="modal-content">
+        <span class="close" id="close">&times;</span>
+        <iframe id="popupContent" src="privacy.html"></iframe>
+      </div>
+    </div>
+
     <script type="module" src="index.js"></script>
+    <script type="module" src="modals.js"></script>
   </body>
 </html>

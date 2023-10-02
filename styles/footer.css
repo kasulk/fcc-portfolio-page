@@ -19,11 +19,20 @@ footer p {
   width: 100%;
 }
 
-footer a {
+footer button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+footer a,
+footer button {
   margin: 0 10%;
 }
 
-footer a:hover {
+footer a:hover,
+footer button:hover {
   text-decoration: underline;
 }
 
