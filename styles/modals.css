@@ -20,16 +20,16 @@
   padding: 20px;
   border-radius: 0.5rem;
   width: 80%;
-  height: 60%;
+  height: 70%;
   position: relative;
   color: black;
 }
 
 iframe {
-  width: 95%;
-  height: 95%;
+  width: 90%;
+  height: 90%;
   border: none;
-  padding-top: 1rem;
+  padding-top: 2rem;
 }
 
 .close {
