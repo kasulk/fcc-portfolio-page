@@ -23,7 +23,7 @@ https://api.chucknorris.io
 
 ## Why
 
-Just to show off my skills 💪
+Just to show off my incredible skills 💪
 
 ## What's next
 
