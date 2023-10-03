@@ -8,9 +8,7 @@ const quoteElement = document.querySelector("#quote q");
 const citeElement = document.querySelector("#quote cite");
 let savedScrollPosition = 0;
 
-setInterval(fetchAndRender, 1000 * 10);
-
-function fetchAndRender() {
+export function fetchAndRender() {
   quoteElement.classList.add("fade");
   citeElement.classList.add("fade");
 
