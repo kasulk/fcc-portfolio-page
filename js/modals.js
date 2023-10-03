@@ -3,7 +3,7 @@ const body = document.body;
 // imprint modal
 const imprintButton = document.querySelector("#legal a:first-child");
 const imprintModal = document.querySelector("#modal-imprint");
-const imprintClose = document.querySelector("#close");
+const imprintClose = document.querySelector("#close-imprint");
 
 imprintButton.addEventListener("click", () => {
   imprintModal.style.display = "block";
@@ -26,7 +26,7 @@ window.addEventListener("click", (event) => {
 // privacy modal
 const privacyButton = document.querySelector("#legal a:last-child");
 const privacyModal = document.querySelector("#modal-privacy");
-const privacyClose = document.querySelector("#close");
+const privacyClose = document.querySelector("#close-privacy");
 
 privacyButton.addEventListener("click", () => {
   privacyModal.style.display = "block";
