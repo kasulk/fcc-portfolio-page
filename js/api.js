@@ -1,4 +1,4 @@
-import { fixFetchedData, getNextRandomCategory } from "./utils/fetchUtils.js";
+import { fixFetchedData, getNextRandomCategory } from "./apiUtils.js";
 
 // const url = "https://api.chucknorris.io/jokes/random";
 const url = "https://api.chucknorris.io/jokes/random?category=";
@@ -9,7 +9,6 @@ const citeElement = document.querySelector("#quote cite");
 let savedScrollPosition = 0;
 
 setInterval(fetchAndRender, 1000 * 10);
-// setInterval(fetchAndRender, 1000 * 4);
 
 function fetchAndRender() {
   quoteElement.classList.add("fade");
@@ -27,7 +26,6 @@ function fetchAndRender() {
         window.scrollTo(0, savedScrollPosition);
         quoteElement.classList.remove("fade");
         category = getNextRandomCategory();
-        // console.log("next category:", category);
       })
       .catch((error) => {
         console.error("Error fetching the data:", error);
