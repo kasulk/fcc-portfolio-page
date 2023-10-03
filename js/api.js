@@ -1,13 +1,4 @@
-import { fixFetchedData, getNextRandomCategory } from "./utils/fetchUtils.js";
-
-function dynamicCopyright() {
-  const thisYear = new Date().getFullYear();
-  const element = (document.createElement("span").innerHTML =
-    "© " + thisYear + " ");
-
-  document.querySelector("#copyright").prepend(element);
-}
-dynamicCopyright();
+import { fixFetchedData, getNextRandomCategory } from "./apiUtils.js";
 
 // const url = "https://api.chucknorris.io/jokes/random";
 const url = "https://api.chucknorris.io/jokes/random?category=";
@@ -17,26 +8,22 @@ const quoteElement = document.querySelector("#quote q");
 const citeElement = document.querySelector("#quote cite");
 let savedScrollPosition = 0;
 
-setInterval(fetchAndRender, 1000 * 10);
-// setInterval(fetchAndRender, 1000 * 4);
-
-function fetchAndRender() {
+export function fetchAndRender() {
   quoteElement.classList.add("fade");
   citeElement.classList.add("fade");
 
   // give the fade a second (and a half) to do its magic
   setTimeout(() => {
-    savedScrollPosition = window.scrollY;
+    //? savedScrollPosition = window.scrollY;
 
     fetch(url + category)
       .then((response) => response.json())
       .then((data) => {
         quoteElement.innerHTML = fixFetchedData(data);
         // go back to previously saved scroll position
-        window.scrollTo(0, savedScrollPosition);
+        //? window.scrollTo(0, savedScrollPosition);
         quoteElement.classList.remove("fade");
         category = getNextRandomCategory();
-        // console.log("next category:", category);
       })
       .catch((error) => {
         console.error("Error fetching the data:", error);
