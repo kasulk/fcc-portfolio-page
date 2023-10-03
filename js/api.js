@@ -14,14 +14,14 @@ export function fetchAndRender() {
 
   // give the fade a second (and a half) to do its magic
   setTimeout(() => {
-    savedScrollPosition = window.scrollY;
+    //? savedScrollPosition = window.scrollY;
 
     fetch(url + category)
       .then((response) => response.json())
       .then((data) => {
         quoteElement.innerHTML = fixFetchedData(data);
         // go back to previously saved scroll position
-        window.scrollTo(0, savedScrollPosition);
+        //? window.scrollTo(0, savedScrollPosition);
         quoteElement.classList.remove("fade");
         category = getNextRandomCategory();
       })
