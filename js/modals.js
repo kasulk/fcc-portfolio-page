@@ -1,7 +1,13 @@
+import { loadHTMLFile } from "./modalsUtils.js";
+
 const body = document.body;
 const legalLinks = document.querySelectorAll("#legal a");
 const modals = document.querySelectorAll(".modal");
+const modalContents = document.querySelectorAll(".modal-content");
 const modalCloseButtons = document.querySelectorAll(".close");
+
+loadHTMLFile("../pages/imprint.html", modalContents[0]);
+loadHTMLFile("../pages/privacy.html", modalContents[1]);
 
 //
 legalLinks.forEach((legalLink, i) => {
