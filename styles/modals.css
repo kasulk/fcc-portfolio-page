@@ -43,7 +43,8 @@ iframe {
   border-radius: 0 0.5rem 0 0;
 }
 
-.close:hover {
+.close:hover,
+.close:active {
   background-color: var(--main-red);
   color: var(--main-white);
   font-weight: bold;

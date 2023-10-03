@@ -1,47 +1,31 @@
 const body = document.body;
+const legalLinks = document.querySelectorAll("#legal a");
+const modals = document.querySelectorAll(".modal");
+const modalCloseButtons = document.querySelectorAll(".close");
 
-// imprint modal
-const imprintButton = document.querySelector("#legal button:first-child");
-const imprintModal = document.querySelector("#modal-imprint");
-const imprintClose = document.querySelector("#close");
-
-imprintButton.addEventListener("click", () => {
-  imprintModal.style.display = "block";
-  body.style.overflow = "hidden";
+//
+legalLinks.forEach((legalLink, i) => {
+  // show modal on link click and freeze body in bg
+  legalLink.addEventListener("click", () => {
+    setModalDisplayAndBodyFreeze(modals[i], "block", "hidden");
+  });
+  // close modal on click on close button and defreeze body
+  modalCloseButtons[i].addEventListener("click", () => {
+    setModalDisplayAndBodyFreeze(modals[i], "none", "auto");
+  });
 });
 
-imprintClose.addEventListener("click", () => {
-  imprintModal.style.display = "none";
-  body.style.overflow = "auto";
-});
-
-// close modal window on click outside of it
+// close modal on click outside of modal-content
 window.addEventListener("click", (event) => {
-  if (event.target === imprintModal) {
-    imprintModal.style.display = "none";
-    body.style.overflow = "auto";
-  }
+  modals.forEach((modal) => {
+    if (event.target === modal) {
+      setModalDisplayAndBodyFreeze(modal, "none", "auto");
+    }
+  });
 });
 
-// privacy modal
-const privacyButton = document.querySelector("#legal button:last-child");
-const privacyModal = document.querySelector("#modal-privacy");
-const privacyClose = document.querySelector("#close");
-
-privacyButton.addEventListener("click", () => {
-  privacyModal.style.display = "block";
-  body.style.overflow = "hidden";
-});
-
-privacyClose.addEventListener("click", () => {
-  privacyModal.style.display = "none";
-  body.style.overflow = "auto";
-});
-
-// close modal window on click outside of it
-window.addEventListener("click", (event) => {
-  if (event.target === privacyModal) {
-    privacyModal.style.display = "none";
-    body.style.overflow = "auto";
-  }
-});
+//
+function setModalDisplayAndBodyFreeze(modal, modalDisplayStyle, bodyOverflow) {
+  modal.style.display = modalDisplayStyle;
+  body.style.overflow = bodyOverflow;
+}
